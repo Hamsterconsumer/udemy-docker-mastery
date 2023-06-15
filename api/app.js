@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
 app.use(cors());
 
@@ -19,6 +19,18 @@ app.get("/", (req, res) => {
     {
       id: "3",
       title: "Show Review: Alice in Borderland",
+    },
+    {
+      id: "4",
+      title: "Video Review: gargamel killing gargas",
+    },
+    {
+      id: "5",
+      title: "test: testing rhgte",
+    },
+    {
+      id: "6",
+      title: "test: testing rhgte",
     },
   ]);
 });
