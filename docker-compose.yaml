@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  api:
+    build: ./api
+    container_name: api_c
+    ports:
+      - "4000:80"
+    volumes:
+      - type: bind
+        source: ./api
+        target: /app
+        bind:
+          propagation: rslave
+    
+  blog:
+    build: ./blog
+    container_name: blog_c
+    ports:
+      - "5000:80"
+
+    stdin_open: true
+    tty: true
